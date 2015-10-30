@@ -6,6 +6,7 @@ use_frameworks!
 target 'Earthquakr' do
   pod 'Alamofire', '~> 3.0'
   pod 'Argo', '~> 2.2'
+  pod 'DZNEmptyDataSet', '~> 1.7'
 end
 
 target 'EarthquakrTests' do

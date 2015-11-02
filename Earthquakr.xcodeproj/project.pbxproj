@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A9B7F941BE6E2A5008FD04F /* QuakeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9B7F931BE6E2A5008FD04F /* QuakeSpec.swift */; };
 		0A9D63EA1BE48F2E000F4778 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A9D63E91BE48F2E000F4778 /* MapKit.framework */; };
 		0AB71B541BE3391E00F950FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB71B531BE3391E00F950FC /* AppDelegate.swift */; };
 		0AB71B561BE3391E00F950FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB71B551BE3391E00F950FC /* ViewController.swift */; };
 		0AB71B591BE3391E00F950FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AB71B571BE3391E00F950FC /* Main.storyboard */; };
 		0AB71B5B1BE3391E00F950FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AB71B5A1BE3391E00F950FC /* Assets.xcassets */; };
 		0AB71B5E1BE3391E00F950FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AB71B5C1BE3391E00F950FC /* LaunchScreen.storyboard */; };
-		0AB71B691BE3391F00F950FC /* EarthquakrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB71B681BE3391F00F950FC /* EarthquakrTests.swift */; };
 		0AB71B741BE3391F00F950FC /* EarthquakrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB71B731BE3391F00F950FC /* EarthquakrUITests.swift */; };
 		800E87C50FD812E90948A954 /* Pods_EarthquakrUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF46901626D2B7AA8F2D977 /* Pods_EarthquakrUITests.framework */; };
 		82E3BC8E9427FCB2DDCDCF0A /* Pods_EarthquakrTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EF683B93AD4E914E9B16F48 /* Pods_EarthquakrTests.framework */; };
@@ -38,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A9B7F931BE6E2A5008FD04F /* QuakeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuakeSpec.swift; path = ../QuakeSpec.swift; sourceTree = "<group>"; };
 		0A9D63E91BE48F2E000F4778 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0AB71B501BE3391E00F950FC /* Earthquakr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Earthquakr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AB71B531BE3391E00F950FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,7 +48,6 @@
 		0AB71B5D1BE3391E00F950FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0AB71B5F1BE3391E00F950FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AB71B641BE3391F00F950FC /* EarthquakrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EarthquakrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0AB71B681BE3391F00F950FC /* EarthquakrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakrTests.swift; sourceTree = "<group>"; };
 		0AB71B6A1BE3391F00F950FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AB71B6F1BE3391F00F950FC /* EarthquakrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EarthquakrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AB71B731BE3391F00F950FC /* EarthquakrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakrUITests.swift; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 		0AB71B671BE3391F00F950FC /* EarthquakrTests */ = {
 			isa = PBXGroup;
 			children = (
-				0AB71B681BE3391F00F950FC /* EarthquakrTests.swift */,
+				0A9B7F931BE6E2A5008FD04F /* QuakeSpec.swift */,
 				0AB71B6A1BE3391F00F950FC /* Info.plist */,
 			);
 			path = EarthquakrTests;
@@ -445,7 +445,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AB71B691BE3391F00F950FC /* EarthquakrTests.swift in Sources */,
+				0A9B7F941BE6E2A5008FD04F /* QuakeSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,10 +602,12 @@
 			baseConfigurationReference = 3AABB3F825E61F468ECE09AB /* Pods-EarthquakrTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = EarthquakrTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kevinmcgladdery.EarthquakrTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Earthquakr.app/Earthquakr";
 			};
 			name = Debug;
@@ -615,6 +617,7 @@
 			baseConfigurationReference = DBC9564A7AF9FA9796A5D702 /* Pods-EarthquakrTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = EarthquakrTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kevinmcgladdery.EarthquakrTests;

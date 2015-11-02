@@ -15,6 +15,7 @@
 		0AB71B5B1BE3391E00F950FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AB71B5A1BE3391E00F950FC /* Assets.xcassets */; };
 		0AB71B5E1BE3391E00F950FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AB71B5C1BE3391E00F950FC /* LaunchScreen.storyboard */; };
 		0AB71B741BE3391F00F950FC /* EarthquakrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB71B731BE3391F00F950FC /* EarthquakrUITests.swift */; };
+		0AE613F41BE7167A002132FC /* QuakeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE613F31BE7167A002132FC /* QuakeList.swift */; };
 		800E87C50FD812E90948A954 /* Pods_EarthquakrUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF46901626D2B7AA8F2D977 /* Pods_EarthquakrUITests.framework */; };
 		82E3BC8E9427FCB2DDCDCF0A /* Pods_EarthquakrTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EF683B93AD4E914E9B16F48 /* Pods_EarthquakrTests.framework */; };
 		E1D22E31F74D9D8F75B92F52 /* Pods_Earthquakr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BED31B2E0587A6AC15C126C /* Pods_Earthquakr.framework */; };
@@ -52,6 +53,7 @@
 		0AB71B6F1BE3391F00F950FC /* EarthquakrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EarthquakrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AB71B731BE3391F00F950FC /* EarthquakrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakrUITests.swift; sourceTree = "<group>"; };
 		0AB71B751BE3391F00F950FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AE613F31BE7167A002132FC /* QuakeList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakeList.swift; sourceTree = "<group>"; };
 		1789FE05828CBB1DA1FFB854 /* Pods-Earthquakr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Earthquakr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Earthquakr/Pods-Earthquakr.debug.xcconfig"; sourceTree = "<group>"; };
 		3AABB3F825E61F468ECE09AB /* Pods-EarthquakrTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EarthquakrTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EarthquakrTests/Pods-EarthquakrTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4BE60ADA8FD85BC93B6B6A96 /* Pods-EarthquakrUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EarthquakrUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EarthquakrUITests/Pods-EarthquakrUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				0AB71B5C1BE3391E00F950FC /* LaunchScreen.storyboard */,
 				0AB71B5F1BE3391E00F950FC /* Info.plist */,
 				0A9B7F951BE6E889008FD04F /* Quake.swift */,
+				0AE613F31BE7167A002132FC /* QuakeList.swift */,
 			);
 			path = Earthquakr;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AB71B561BE3391E00F950FC /* ViewController.swift in Sources */,
+				0AE613F41BE7167A002132FC /* QuakeList.swift in Sources */,
 				0A9B7F961BE6E889008FD04F /* Quake.swift in Sources */,
 				0AB71B541BE3391E00F950FC /* AppDelegate.swift in Sources */,
 			);

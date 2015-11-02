@@ -12,4 +12,5 @@ struct Quake {
   let magnitude: Double
   let locationString: String
   let rawTime: Int
+  let url: String
 }

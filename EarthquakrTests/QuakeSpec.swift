@@ -17,8 +17,9 @@ class QuakeSpec: QuickSpec {
       let magnitude = 2.5
       let locationString = "4km ESE of San Ramon, California"
       let rawTime = 1388620296020
+      let url = "http://hey.there.bozo"
       let quake = Quake(magnitude: magnitude, locationString: locationString,
-        rawTime: rawTime)
+        rawTime: rawTime, url: url)
       
       it("has a magnitude") {
         expect(quake.magnitude) == 2.5
@@ -30,6 +31,10 @@ class QuakeSpec: QuickSpec {
       
       it("has a raw time value") {
         expect(quake.rawTime) == rawTime
+      }
+      
+      it("has a url in the form of a string") {
+        expect(quake.url) == url
       }
     }
   }

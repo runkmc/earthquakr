@@ -13,4 +13,5 @@ struct Quake {
   let locationString: String
   let rawTime: Int
   let url: String
+  let coordinates: [Double]
 }

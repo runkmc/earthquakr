@@ -10,4 +10,5 @@ import Foundation
 
 struct Quake {
   let magnitude: Double
+  let locationString: String
 }

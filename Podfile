@@ -9,12 +9,16 @@ target 'Earthquakr' do
   pod 'DZNEmptyDataSet', '~> 1.7'
 end
 
-target 'EarthquakrTests' do
+def testing_pods
   pod 'Quick', '~> 0.8'
   pod 'Nimble', '~> 3.0.0'
 end
 
-target 'EarthquakrUITests' do
+target 'EarthquakrTests' do
+  testing_pods
+end
 
+target 'EarthquakrUITests' do
+  testing_pods
 end
 

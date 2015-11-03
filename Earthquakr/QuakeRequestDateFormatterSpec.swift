@@ -21,7 +21,7 @@ class DateFormatterSpec: QuickSpec {
       }
       
       it("subtracts 12 hours from an NSDate") {
-        let lastTwelve = twelveHoursAgo(date)
+        let lastTwelve = twelveHoursAgo(date: date)
         expect(quakeRequestDateFormatter(lastTwelve)) == "2014-01-01T03:45:56-08:00"
       }
     }

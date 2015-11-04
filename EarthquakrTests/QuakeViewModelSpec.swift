@@ -32,6 +32,10 @@ class QuakeViewModelSpec: QuickSpec {
       it("returns a NSURL") {
         expect(quakemodel.url.absoluteString) == "http://earthquake.usgs.gov/earthquakes/eventpage/ci11408890"
       }
+      
+      it("returns a CLLocation") {
+        expect(quakemodel.location.coordinate.latitude) == -116.7776667
+      }
     }
   }
 }

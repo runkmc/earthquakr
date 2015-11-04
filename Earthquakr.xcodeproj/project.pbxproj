@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0A9D63EA1BE48F2E000F4778 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A9D63E91BE48F2E000F4778 /* MapKit.framework */; };
+		0AAA57EE1BE8804000992F41 /* QuakeGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAA57ED1BE8804000992F41 /* QuakeGetter.swift */; };
+		0AAA57F01BE895D700992F41 /* QuakeRequestDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAA57EF1BE895D700992F41 /* QuakeRequestDateFormatter.swift */; };
+		0AAA57F21BE895F100992F41 /* QuakeRequestDateFormatterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAA57F11BE895F100992F41 /* QuakeRequestDateFormatterSpec.swift */; };
 		0AB71B541BE3391E00F950FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB71B531BE3391E00F950FC /* AppDelegate.swift */; };
 		0AB71B561BE3391E00F950FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB71B551BE3391E00F950FC /* ViewController.swift */; };
 		0AB71B591BE3391E00F950FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AB71B571BE3391E00F950FC /* Main.storyboard */; };
@@ -42,6 +45,9 @@
 
 /* Begin PBXFileReference section */
 		0A9D63E91BE48F2E000F4778 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		0AAA57ED1BE8804000992F41 /* QuakeGetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakeGetter.swift; sourceTree = "<group>"; };
+		0AAA57EF1BE895D700992F41 /* QuakeRequestDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakeRequestDateFormatter.swift; sourceTree = "<group>"; };
+		0AAA57F11BE895F100992F41 /* QuakeRequestDateFormatterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuakeRequestDateFormatterSpec.swift; path = ../Earthquakr/QuakeRequestDateFormatterSpec.swift; sourceTree = "<group>"; };
 		0AB71B501BE3391E00F950FC /* Earthquakr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Earthquakr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AB71B531BE3391E00F950FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AB71B551BE3391E00F950FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +132,8 @@
 				0AB71B531BE3391E00F950FC /* AppDelegate.swift */,
 				0AB71B551BE3391E00F950FC /* ViewController.swift */,
 				0AB71B571BE3391E00F950FC /* Main.storyboard */,
+				0AAA57ED1BE8804000992F41 /* QuakeGetter.swift */,
+				0AAA57EF1BE895D700992F41 /* QuakeRequestDateFormatter.swift */,
 				0AB71B5A1BE3391E00F950FC /* Assets.xcassets */,
 				0AB71B5C1BE3391E00F950FC /* LaunchScreen.storyboard */,
 				0AB71B5F1BE3391E00F950FC /* Info.plist */,
@@ -138,6 +146,7 @@
 		0AB71B671BE3391F00F950FC /* EarthquakrTests */ = {
 			isa = PBXGroup;
 			children = (
+				0AAA57F11BE895F100992F41 /* QuakeRequestDateFormatterSpec.swift */,
 				0AB71B6A1BE3391F00F950FC /* Info.plist */,
 				0AE8670F1BE72CF2005178B2 /* QuakeSpec.swift */,
 				0AFB231A1BE7E4C8008DBA84 /* QuakeListSpec.swift */,
@@ -447,8 +456,10 @@
 			files = (
 				0AB71B561BE3391E00F950FC /* ViewController.swift in Sources */,
 				0AFB231D1BE7E4D9008DBA84 /* QuakeList.swift in Sources */,
+				0AAA57F01BE895D700992F41 /* QuakeRequestDateFormatter.swift in Sources */,
 				0AE8670E1BE72CDD005178B2 /* Quake.swift in Sources */,
 				0AB71B541BE3391E00F950FC /* AppDelegate.swift in Sources */,
+				0AAA57EE1BE8804000992F41 /* QuakeGetter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +469,7 @@
 			files = (
 				0AFB231B1BE7E4C8008DBA84 /* QuakeListSpec.swift in Sources */,
 				0AE867101BE72CF2005178B2 /* QuakeSpec.swift in Sources */,
+				0AAA57F21BE895F100992F41 /* QuakeRequestDateFormatterSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

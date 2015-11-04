@@ -20,6 +20,10 @@ class QuakeViewModelSpec: QuickSpec {
       it("returns the magnitude to one decimal place") {
         expect(quakemodel.magnitudeString) == "1.3"
       }
+      
+      it("returns the location String") {
+        expect(quakemodel.locationString) == quake.locationString
+      }
     }
   }
 }

@@ -12,10 +12,12 @@ import CoreLocation
 struct QuakeViewModel {
   let quake: Quake
   let magnitudeString: String
-//  let locationString: String
 //  let time: String
 //  let url: NSURL
 //  let location: CLLocation
+  var locationString: String {
+    return self.quake.locationString
+  }
   
   init(quake:Quake) {
     self.quake = quake

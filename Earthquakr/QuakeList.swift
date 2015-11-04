@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+struct QuakeList {
+  let quakeViewModels: [QuakeViewModel]
+  
+  init(quakes: [Quake]) {
+    self.quakeViewModels = quakes.map { QuakeViewModel(quake: $0) }
+  }
+}

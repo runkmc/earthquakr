@@ -24,7 +24,7 @@ struct QuakeViewModel {
     self.magnitudeString = String(format: "%.1f", quake.magnitude)
     self.time = QuakeViewModel.formatTime(quake.rawTime)
     self.url = NSURL(string: quake.url)
-    self.location = CLLocation(latitude: quake.coordinates[0], longitude: quake.coordinates[1])
+    self.location = CLLocation(latitude: quake.coordinates[1], longitude: quake.coordinates[0])
   }
   
   static private func formatTime(time:Int) -> String {

@@ -34,7 +34,7 @@ class QuakeViewModelSpec: QuickSpec {
       }
       
       it("returns a CLLocation") {
-        expect(quakemodel.location.coordinate.latitude) == -116.7776667
+        expect(quakemodel.location.coordinate.longitude) == -116.7776667
       }
     }
   }

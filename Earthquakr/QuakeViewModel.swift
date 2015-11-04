@@ -13,7 +13,7 @@ struct QuakeViewModel {
   let quake: Quake
   let magnitudeString: String
   let time: String
-//  let url: NSURL
+  let url: NSURL!
 //  let location: CLLocation
   var locationString: String {
     return self.quake.locationString
@@ -23,6 +23,7 @@ struct QuakeViewModel {
     self.quake = quake
     self.magnitudeString = String(format: "%.1f", quake.magnitude)
     self.time = QuakeViewModel.formatTime(quake.rawTime)
+    self.url = NSURL(string: quake.url)
   }
   
   static private func formatTime(time:Int) -> String {

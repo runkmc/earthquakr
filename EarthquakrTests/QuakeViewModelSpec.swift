@@ -28,6 +28,10 @@ class QuakeViewModelSpec: QuickSpec {
       it("returns the time as a short string") {
         expect(quakemodel.time) == "10:14 PM"
       }
+      
+      it("returns a NSURL") {
+        expect(quakemodel.url.absoluteString) == "http://earthquake.usgs.gov/earthquakes/eventpage/ci11408890"
+      }
     }
   }
 }

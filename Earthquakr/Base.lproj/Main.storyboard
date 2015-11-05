@@ -11,10 +11,15 @@
             <objects>
                 <navigationController id="vKl-Lf-reK" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="N44-lO-PXm">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="N44-lO-PXm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
+                        <color key="barTintColor" red="0.87058823529411766" green="0.36078431372549019" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="0.0"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="Sl5-Mn-h5N" kind="relationship" relationship="rootViewController" id="2s0-t7-dVP"/>

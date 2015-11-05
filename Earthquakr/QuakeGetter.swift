@@ -14,16 +14,21 @@ import Alamofire
 class QuakeGetter {
   var quakes: [Quake] = []
   var parameters: [String: String]
+  let completion:  ([Quake]) -> ()
   
-  init(parameters: [String: String]) {
+  init(parameters: [String: String], completion: ([Quake]) -> ()) {
     self.parameters = parameters
     self.parameters["format"] = "geojson"
     self.parameters["starttime"] = self.parameters["starttime"] ?? {
       return quakeRequestDateFormatter(twelveHoursAgo(date: NSDate()))
       }()
-   
+    self.completion = completion
+  }
+  
+  func getQuakes() {
     Alamofire.request(.GET, "http://earthquake.usgs.gov/fdsnws/event/1/query", parameters: self.parameters).responseJSON { response in
-      self.handleJson(JSON(data: response.data!).dictionary!)
+          self.handleJson(JSON(data: response.data!).dictionary!)
+          self.completion(self.quakes)
       }
     }
   
@@ -41,4 +46,5 @@ class QuakeGetter {
       self.quakes.append(q)
     }
   }
+  
 }

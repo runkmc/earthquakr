@@ -11,6 +11,7 @@
 		0A33BBAB1BE9CCA1005B3C1D /* QuakeViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A33BBAA1BE9CCA1005B3C1D /* QuakeViewModelSpec.swift */; };
 		0A33BBB11BEAB218005B3C1D /* QuakeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A33BBB01BEAB218005B3C1D /* QuakeListViewController.swift */; };
 		0A33BBB31BEAB304005B3C1D /* QuakeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A33BBB21BEAB304005B3C1D /* QuakeDetailViewController.swift */; };
+		0A33BBB51BEC57C0005B3C1D /* QuakeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A33BBB41BEC57C0005B3C1D /* QuakeCell.swift */; };
 		0A9D63EA1BE48F2E000F4778 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A9D63E91BE48F2E000F4778 /* MapKit.framework */; };
 		0AAA57EE1BE8804000992F41 /* QuakeGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAA57ED1BE8804000992F41 /* QuakeGetter.swift */; };
 		0AAA57F01BE895D700992F41 /* QuakeRequestDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAA57EF1BE895D700992F41 /* QuakeRequestDateFormatter.swift */; };
@@ -52,6 +53,7 @@
 		0A33BBAA1BE9CCA1005B3C1D /* QuakeViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakeViewModelSpec.swift; sourceTree = "<group>"; };
 		0A33BBB01BEAB218005B3C1D /* QuakeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuakeListViewController.swift; path = ../QuakeListViewController.swift; sourceTree = "<group>"; };
 		0A33BBB21BEAB304005B3C1D /* QuakeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakeDetailViewController.swift; sourceTree = "<group>"; };
+		0A33BBB41BEC57C0005B3C1D /* QuakeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakeCell.swift; sourceTree = "<group>"; };
 		0A9D63E91BE48F2E000F4778 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0AAA57ED1BE8804000992F41 /* QuakeGetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakeGetter.swift; sourceTree = "<group>"; };
 		0AAA57EF1BE895D700992F41 /* QuakeRequestDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakeRequestDateFormatter.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				0AB71B531BE3391E00F950FC /* AppDelegate.swift */,
 				0AB71B551BE3391E00F950FC /* ViewController.swift */,
 				0AB71B571BE3391E00F950FC /* Main.storyboard */,
+				0A33BBB41BEC57C0005B3C1D /* QuakeCell.swift */,
 				0AAA57ED1BE8804000992F41 /* QuakeGetter.swift */,
 				0AAA57EF1BE895D700992F41 /* QuakeRequestDateFormatter.swift */,
 				0AB71B5A1BE3391E00F950FC /* Assets.xcassets */,
@@ -473,6 +476,7 @@
 				0AAA57F01BE895D700992F41 /* QuakeRequestDateFormatter.swift in Sources */,
 				0AE8670E1BE72CDD005178B2 /* Quake.swift in Sources */,
 				0AB71B541BE3391E00F950FC /* AppDelegate.swift in Sources */,
+				0A33BBB51BEC57C0005B3C1D /* QuakeCell.swift in Sources */,
 				0AAA57EE1BE8804000992F41 /* QuakeGetter.swift in Sources */,
 				0A33BBA91BE9CC94005B3C1D /* QuakeViewModel.swift in Sources */,
 			);

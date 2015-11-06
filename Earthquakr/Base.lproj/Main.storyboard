@@ -17,9 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.87058823529411766" green="0.36078431372549019" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
                     </navigationBar>
@@ -219,6 +220,9 @@
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                         <state key="normal" title="See more at usgs.gov"/>
+                                        <connections>
+                                            <action selector="didTapDetailButton:" destination="uVo-Gf-Pbs" eventType="touchUpInside" id="BHf-D3-Z2f"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <animations/>

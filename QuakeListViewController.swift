@@ -93,7 +93,6 @@ class QuakeListViewController: UIViewController, CLLocationManagerDelegate {
         self.askForLocation()
         tableView.dataSource = self
         tableView.delegate = self
-
         // Do any additional setup after loading the view.
     }
 
@@ -115,6 +114,10 @@ class QuakeListViewController: UIViewController, CLLocationManagerDelegate {
 extension QuakeListViewController: UITableViewDelegate {
   func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
     return 55.0
+  }
+  
+  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    tableView.deselectRowAtIndexPath(indexPath, animated: true)
   }
 }
 

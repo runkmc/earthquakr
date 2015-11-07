@@ -50,15 +50,28 @@ class QuakeListViewController: UIViewController, CLLocationManagerDelegate {
     var params: [String: String] = ["latitude": String(currentLocation.coordinate.latitude)]
     params["longitude"] = String(currentLocation.coordinate.longitude)
     params["maxradiuskm"] = "2000"
-    params["minmagnitude"] = "1.2"
-    params["starttime"] = "2015-10-25"
+    params["minmagnitude"] = "1.9"
     let getter = QuakeGetter(parameters: params, completion: { quakes in
-      let qlist = QuakeList(quakes: quakes, location: currentLocation, minNumber: 1.2)
+      let qlist = QuakeList(quakes: quakes, location: currentLocation, minNumber: self.sensitivity())
       self.quakeList = qlist
-      self.earthquakesLabel.text = "\(self.quakeList!.quakeViewModels.count) Earthquakes"
+      let numberOfQuakes = qlist.quakeViewModels.count
+      if numberOfQuakes == 1 {
+        self.earthquakesLabel.text = "1 Earthquake"
+      } else {
+        self.earthquakesLabel.text = "\(numberOfQuakes) Earthquakes"
+      }
       self.tableView.reloadData()
     })
     getter.getQuakes()
+  }
+  
+  func sensitivity() -> Double {
+    let highSensitivity = NSUserDefaults.standardUserDefaults().objectForKey("highSensitivity") as! Bool
+    if highSensitivity {
+      return 1.4
+    } else {
+      return 2.5
+    }
   }
   
   func updateLocationLabel(currentLocation: CLLocation) {

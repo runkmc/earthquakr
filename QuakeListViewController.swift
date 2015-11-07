@@ -68,9 +68,9 @@ class QuakeListViewController: UIViewController, CLLocationManagerDelegate {
   func sensitivity() -> Double {
     let highSensitivity = NSUserDefaults.standardUserDefaults().objectForKey("highSensitivity") as! Bool
     if highSensitivity {
-      return 1.4
+      return 1.9
     } else {
-      return 2.5
+      return 2.9
     }
   }
   

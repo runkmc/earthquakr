@@ -47,9 +47,8 @@ class QuakeListViewController: UIViewController, CLLocationManagerDelegate {
       }
     self.loc = currentLocation
     self.updateLocationLabel(currentLocation)
-//    var params: [String: String] = ["latitude": String(currentLocation.coordinate.latitude)]
-//    params["longitude"] = String(currentLocation.coordinate.longitude)
-    var params = ["latitude": "36.5470000", "longitude": "-121.0400000"]
+    var params: [String: String] = ["latitude": String(currentLocation.coordinate.latitude)]
+    params["longitude"] = String(currentLocation.coordinate.longitude)
     params["maxradiuskm"] = "2000"
     params["minmagnitude"] = "1.2"
     params["starttime"] = "2015-10-25"

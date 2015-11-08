@@ -14,12 +14,14 @@ class QuakeListViewController: UIViewController, CLLocationManagerDelegate {
   var quakeList: QuakeList?
   let manager = CLLocationManager()
   var loc = CLLocation()
+  let refresh = UIRefreshControl()
   @IBOutlet weak var locationLabel: UILabel!
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var earthquakesLabel: UILabel!
   
   func askForLocation() {
-    manager.delegate = self
+    locationLabel.text = "Getting Location..."
+    earthquakesLabel.text = "Getting Earthquakes..."
     manager.requestWhenInUseAuthorization()
     let status = CLLocationManager.authorizationStatus()
     
@@ -33,7 +35,7 @@ class QuakeListViewController: UIViewController, CLLocationManagerDelegate {
   
   func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
     if status == .AuthorizedAlways || status == .AuthorizedWhenInUse {
-      locationLabel.text = "Getting Location"
+      locationLabel.text = "Getting Location..."
     } else {
       locationLabel.text = "Location Services Disabled"
     }
@@ -60,6 +62,7 @@ class QuakeListViewController: UIViewController, CLLocationManagerDelegate {
       } else {
         self.earthquakesLabel.text = "\(numberOfQuakes) Earthquakes"
       }
+      self.refresh.endRefreshing()
       self.tableView.reloadData()
     })
     getter.getQuakes()
@@ -100,11 +103,19 @@ class QuakeListViewController: UIViewController, CLLocationManagerDelegate {
     locationLabel.text = "Could not get location"
   }
   
+  func refreshPulled() {
+    refresh.beginRefreshing()
+    self.askForLocation()
+  }
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.askForLocation()
+        manager.delegate = self
         tableView.dataSource = self
         tableView.delegate = self
+        self.askForLocation()
+        tableView.addSubview(refresh)
+        refresh.addTarget(self, action: Selector("refreshPulled"), forControlEvents: .ValueChanged)
         // Do any additional setup after loading the view.
     }
 

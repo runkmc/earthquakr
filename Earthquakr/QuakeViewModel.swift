@@ -30,10 +30,7 @@ struct QuakeViewModel {
   static private func formatTime(time:Int) -> String {
     let formatter = NSDateFormatter()
     formatter.dateFormat = "h:mm a"
-    
-    let newTime = time / 1000
-    let date = NSDate(timeIntervalSince1970: Double(newTime))
-    
+    let date = NSDate(timeIntervalSince1970: Double(time / 1000))
     return formatter.stringFromDate(date)
   }
 }

@@ -22,12 +22,15 @@ struct QuakeList {
     return viewModels.filter { quakeModel in
       let distance = location.distanceFromLocation(quakeModel.location) / 1000.0
       let magnitude = quakeModel.quake.magnitude
-      return mmiFormula(distance, magnitude: magnitude) > mmiNumber
+      if quakeModel.location.coordinate.longitude < Double(-112) {
+        return mmiFormula(distance, magnitude: magnitude) > mmiNumber
+      } else {
+        return easternMmiFormula(distance, magnitude: magnitude) > mmiNumber
+      }
     }
   }
   
   static func mmiFormula(distance: Double, magnitude: Double) -> Double {
-    
     func first() -> Double {
       return 1.15 + (1.01 * magnitude)
     }
@@ -37,7 +40,20 @@ struct QuakeList {
     func third() -> Double {
       return 1.72 * log(distance) / QuakeList.logConstant
     }
-    
      return first() - second() - third()
     }
+  
+  static func easternMmiFormula(distance: Double, magnitude: Double) -> Double {
+    func first() -> Double {
+      return 1.60 + (1.29 * magnitude)
+    }
+    func second() -> Double {
+      return 0.00051 * distance
+    }
+    func third() -> Double {
+      return 2.16 * log(distance) / QuakeList.logConstant
+    }
+     return first() - second() - third()
   }
+  
+}

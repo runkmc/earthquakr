@@ -1,20 +1,17 @@
 PODS:
   - Alamofire (3.1.0)
-  - DZNEmptyDataSet (1.7.2)
   - Nimble (3.0.0)
   - Quick (0.8.0)
   - SwiftyJSON (2.3.1)
 
 DEPENDENCIES:
   - Alamofire (~> 3.0)
-  - DZNEmptyDataSet (~> 1.7)
   - Nimble (~> 3.0.0)
   - Quick (~> 0.8)
   - SwiftyJSON (~> 2.3.1)
 
 SPEC CHECKSUMS:
   Alamofire: 415bd7f56197722978759078486689f7ef913dce
-  DZNEmptyDataSet: 0ec00bfc230d7450997b60c127afdd0b9f24f3b6
   Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
   Quick: 563d0f6ec5f72e394645adb377708639b7dd38ab
   SwiftyJSON: 592b53bee5ef3dd9b3bebc6b9cb7ee35426ae8c3

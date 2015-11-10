@@ -5,7 +5,6 @@ use_frameworks!
 
 target 'Earthquakr' do
   pod 'Alamofire', '~> 3.0'
-  pod 'DZNEmptyDataSet', '~> 1.7'
   pod 'SwiftyJSON', '~> 2.3.1'
 end
 

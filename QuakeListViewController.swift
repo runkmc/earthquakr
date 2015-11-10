@@ -45,6 +45,8 @@ class QuakeListViewController: UIViewController, CLLocationManagerDelegate {
     let location = locations.last
     guard let currentLocation = location else {
       locationLabel.text = "Could not get location"
+      earthquakesLabel.text = ""
+      self.refresh.endRefreshing()
       return
       }
     self.loc = currentLocation
@@ -69,8 +71,10 @@ class QuakeListViewController: UIViewController, CLLocationManagerDelegate {
   }
   
   func sensitivity() -> Double {
-    let highSensitivity = NSUserDefaults.standardUserDefaults().objectForKey("highSensitivity") as! Bool
-    if highSensitivity {
+    guard let highSensitivity = NSUserDefaults.standardUserDefaults().objectForKey("highSensitivity") else {
+      return 2.9
+    }
+    if highSensitivity as! Bool {
       return 1.9
     } else {
       return 2.9

@@ -22,6 +22,7 @@
 		0AB71B5B1BE3391E00F950FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AB71B5A1BE3391E00F950FC /* Assets.xcassets */; };
 		0AB71B5E1BE3391E00F950FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AB71B5C1BE3391E00F950FC /* LaunchScreen.storyboard */; };
 		0AB71B741BE3391F00F950FC /* EarthquakrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB71B731BE3391F00F950FC /* EarthquakrUITests.swift */; };
+		0AE557351BF1BA100008A016 /* Oklahoma.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 0AE557341BF1BA100008A016 /* Oklahoma.gpx */; };
 		0AE8670E1BE72CDD005178B2 /* Quake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE8670D1BE72CDD005178B2 /* Quake.swift */; };
 		0AE867101BE72CF2005178B2 /* QuakeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE8670F1BE72CF2005178B2 /* QuakeSpec.swift */; };
 		0AFB231B1BE7E4C8008DBA84 /* QuakeListSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB231A1BE7E4C8008DBA84 /* QuakeListSpec.swift */; };
@@ -71,6 +72,7 @@
 		0AB71B6F1BE3391F00F950FC /* EarthquakrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EarthquakrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AB71B731BE3391F00F950FC /* EarthquakrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakrUITests.swift; sourceTree = "<group>"; };
 		0AB71B751BE3391F00F950FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AE557341BF1BA100008A016 /* Oklahoma.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Oklahoma.gpx; sourceTree = "<group>"; };
 		0AE8670D1BE72CDD005178B2 /* Quake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quake.swift; sourceTree = "<group>"; };
 		0AE8670F1BE72CF2005178B2 /* QuakeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakeSpec.swift; sourceTree = "<group>"; };
 		0AFB231A1BE7E4C8008DBA84 /* QuakeListSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakeListSpec.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 		0AB71B521BE3391E00F950FC /* Earthquakr */ = {
 			isa = PBXGroup;
 			children = (
+				0AE557341BF1BA100008A016 /* Oklahoma.gpx */,
 				0A33BBB01BEAB218005B3C1D /* QuakeListViewController.swift */,
 				0AFB49881BEDC35A00D8D091 /* Settings.bundle */,
 				0AB71B531BE3391E00F950FC /* AppDelegate.swift */,
@@ -326,6 +329,7 @@
 				0AB71B5E1BE3391E00F950FC /* LaunchScreen.storyboard in Resources */,
 				0AB71B5B1BE3391E00F950FC /* Assets.xcassets in Resources */,
 				0AB71B591BE3391E00F950FC /* Main.storyboard in Resources */,
+				0AE557351BF1BA100008A016 /* Oklahoma.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -40,10 +40,11 @@ class QuakeGetter {
       let url = result["properties"]["url"].stringValue
       let coords = result["geometry"]["coordinates"].arrayValue
       let coordinates:[Double] = coords.map {$0.doubleValue}
-      
-      let q = Quake(magnitude: magnitude, locationString: locationString, rawTime: Int(rawTime)!,
+      if let intTime = Int(rawTime) {
+      let q = Quake(magnitude: magnitude, locationString: locationString, rawTime: intTime,
         url: url, coordinates: coordinates)
       self.quakes.append(q)
+      }
     }
   }
   

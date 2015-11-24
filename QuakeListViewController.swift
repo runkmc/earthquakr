@@ -8,8 +8,9 @@
 
 import UIKit
 import CoreLocation
+import DZNEmptyDataSet
 
-class QuakeListViewController: UIViewController, CLLocationManagerDelegate {
+class QuakeListViewController: UIViewController, CLLocationManagerDelegate  {
 
   var quakeList: QuakeList?
   let manager = CLLocationManager()

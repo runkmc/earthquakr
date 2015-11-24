@@ -17,7 +17,6 @@
 		0AAA57F01BE895D700992F41 /* QuakeRequestDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAA57EF1BE895D700992F41 /* QuakeRequestDateFormatter.swift */; };
 		0AAA57F21BE895F100992F41 /* QuakeRequestDateFormatterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAA57F11BE895F100992F41 /* QuakeRequestDateFormatterSpec.swift */; };
 		0AB71B541BE3391E00F950FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB71B531BE3391E00F950FC /* AppDelegate.swift */; };
-		0AB71B561BE3391E00F950FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB71B551BE3391E00F950FC /* ViewController.swift */; };
 		0AB71B591BE3391E00F950FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AB71B571BE3391E00F950FC /* Main.storyboard */; };
 		0AB71B5B1BE3391E00F950FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AB71B5A1BE3391E00F950FC /* Assets.xcassets */; };
 		0AB71B5E1BE3391E00F950FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AB71B5C1BE3391E00F950FC /* LaunchScreen.storyboard */; };
@@ -62,7 +61,6 @@
 		0AAA57F11BE895F100992F41 /* QuakeRequestDateFormatterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuakeRequestDateFormatterSpec.swift; path = ../Earthquakr/QuakeRequestDateFormatterSpec.swift; sourceTree = "<group>"; };
 		0AB71B501BE3391E00F950FC /* Earthquakr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Earthquakr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AB71B531BE3391E00F950FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0AB71B551BE3391E00F950FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0AB71B581BE3391E00F950FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0AB71B5A1BE3391E00F950FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AB71B5D1BE3391E00F950FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -147,7 +145,6 @@
 				0A33BBB01BEAB218005B3C1D /* QuakeListViewController.swift */,
 				0AFB49881BEDC35A00D8D091 /* Settings.bundle */,
 				0AB71B531BE3391E00F950FC /* AppDelegate.swift */,
-				0AB71B551BE3391E00F950FC /* ViewController.swift */,
 				0AB71B571BE3391E00F950FC /* Main.storyboard */,
 				0A33BBB41BEC57C0005B3C1D /* QuakeCell.swift */,
 				0AAA57ED1BE8804000992F41 /* QuakeGetter.swift */,
@@ -478,7 +475,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A33BBB31BEAB304005B3C1D /* QuakeDetailViewController.swift in Sources */,
-				0AB71B561BE3391E00F950FC /* ViewController.swift in Sources */,
 				0AFB231D1BE7E4D9008DBA84 /* QuakeList.swift in Sources */,
 				0A33BBB11BEAB218005B3C1D /* QuakeListViewController.swift in Sources */,
 				0AAA57F01BE895D700992F41 /* QuakeRequestDateFormatter.swift in Sources */,

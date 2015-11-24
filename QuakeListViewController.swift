@@ -9,8 +9,9 @@
 import UIKit
 import CoreLocation
 import DZNEmptyDataSet
+import Colortools
 
-class QuakeListViewController: UIViewController, CLLocationManagerDelegate  {
+class QuakeListViewController: UIViewController, CLLocationManagerDelegate, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate  {
 
   var quakeList: QuakeList?
   let manager = CLLocationManager()
@@ -84,14 +85,14 @@ class QuakeListViewController: UIViewController, CLLocationManagerDelegate  {
         self.locationLabel.text = "\(currentLocation.coordinate.latitude), \(currentLocation.coordinate.longitude)"
         return
       }
-      if let city = place.locality {
-        self.locationLabel.text = city
+      if let city = place.locality, let state = place.administrativeArea {
+        self.locationLabel.text = "\(city), \(state)"
         return
       }
       if let area = place.administrativeArea {
         self.locationLabel.text = area
         return
-      }
+      } else { self.locationLabel.text = "" }
     })
   }
   
@@ -106,6 +107,9 @@ class QuakeListViewController: UIViewController, CLLocationManagerDelegate  {
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.emptyDataSetDelegate = self
+        self.tableView.emptyDataSetSource = self
+        self.tableView.tableFooterView = UIView()
         manager.delegate = self
         tableView.dataSource = self
         tableView.delegate = self
@@ -128,6 +132,36 @@ class QuakeListViewController: UIViewController, CLLocationManagerDelegate  {
       dvc.quake = cell.quake
       dvc.currentLocation = self.loc
     }
+  
+  func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+    let text = "No Nearby Earthquakes"
+    let attribs = [NSFontAttributeName: UIFont.boldSystemFontOfSize(18),
+      NSForegroundColorAttributeName: UIColor.darkGrayColor()]
+    return NSAttributedString(string: text, attributes: attribs)
+  }
+  
+  func descriptionForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+    let text = "Feel free to ride that unicycle or eat that precariously stacked ice cream cone!"
+    let lightGrey = UIColor.darkGrayColor().lighten(0.2)!
+    let attribs = [NSFontAttributeName: UIFont.systemFontOfSize(14),
+      NSForegroundColorAttributeName: lightGrey]
+    return NSAttributedString(string: text, attributes: attribs)
+  }
+  
+  func buttonTitleForEmptyDataSet(scrollView: UIScrollView!, forState state: UIControlState) -> NSAttributedString! {
+    let text = "Check for Earthquakes"
+    let attribs = [NSFontAttributeName: UIFont.boldSystemFontOfSize(14),
+      NSForegroundColorAttributeName: UIColor.init(hex: 0xD55235FF)]
+    return NSAttributedString(string: text, attributes: attribs)
+  }
+  
+  func emptyDataSetDidTapButton(scrollView: UIScrollView!) {
+    self.askForLocation()
+  }
+  
+  func verticalOffsetForEmptyDataSet(scrollView: UIScrollView!) -> CGFloat {
+    return -70.0
+  }
 }
 
 extension QuakeListViewController: UITableViewDelegate {

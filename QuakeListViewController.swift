@@ -18,11 +18,9 @@ class QuakeListViewController: UIViewController, CLLocationManagerDelegate  {
   let refresh = UIRefreshControl()
   @IBOutlet weak var locationLabel: UILabel!
   @IBOutlet weak var tableView: UITableView!
-  @IBOutlet weak var earthquakesLabel: UILabel!
   
   func askForLocation() {
     locationLabel.text = "Getting Location..."
-    earthquakesLabel.text = "Getting Earthquakes..."
     manager.requestWhenInUseAuthorization()
     let status = CLLocationManager.authorizationStatus()
     
@@ -46,7 +44,6 @@ class QuakeListViewController: UIViewController, CLLocationManagerDelegate  {
     let location = locations.last
     guard let currentLocation = location else {
       locationLabel.text = "Could not get location"
-      earthquakesLabel.text = ""
       self.refresh.endRefreshing()
       return
       }
@@ -59,12 +56,6 @@ class QuakeListViewController: UIViewController, CLLocationManagerDelegate  {
     let getter = QuakeGetter(parameters: params, completion: { quakes in
       let qlist = QuakeList(quakes: quakes, location: currentLocation, minNumber: self.sensitivity())
       self.quakeList = qlist
-      let numberOfQuakes = qlist.quakeViewModels.count
-      if numberOfQuakes == 1 {
-        self.earthquakesLabel.text = "1 Earthquake"
-      } else {
-        self.earthquakesLabel.text = "\(numberOfQuakes) Earthquakes"
-      }
       self.refresh.endRefreshing()
       self.tableView.reloadData()
     })

@@ -162,6 +162,10 @@ class QuakeListViewController: UIViewController, CLLocationManagerDelegate, DZNE
   func verticalOffsetForEmptyDataSet(scrollView: UIScrollView!) -> CGFloat {
     return -70.0
   }
+  
+  func emptyDataSetShouldAllowScroll(scrollView: UIScrollView!) -> Bool {
+    return true
+  }
 }
 
 extension QuakeListViewController: UITableViewDelegate {

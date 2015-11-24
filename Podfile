@@ -6,6 +6,8 @@ use_frameworks!
 target 'Earthquakr' do
   pod 'Alamofire', '~> 3.0'
   pod 'SwiftyJSON', '~> 2.3.1'
+  pod 'Colortools'
+  pod 'DZNEmptyDataSet', '~> 1.7.2'
 end
 
 def testing_pods

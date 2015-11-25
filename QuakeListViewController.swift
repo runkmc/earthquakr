@@ -54,6 +54,7 @@ class QuakeListViewController: UIViewController, CLLocationManagerDelegate, DZNE
     params["longitude"] = String(currentLocation.coordinate.longitude)
     params["maxradiuskm"] = "2000"
     params["minmagnitude"] = "1.9"
+    // params["starttime"] = "2015-11-22"
     let getter = QuakeGetter(parameters: params, completion: { quakes in
       let qlist = QuakeList(quakes: quakes, location: currentLocation, minNumber: self.sensitivity())
       self.quakeList = qlist

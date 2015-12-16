@@ -17,7 +17,8 @@ func quakeRequestDateFormatter(date:NSDate) -> String {
 }
 
 func xHoursAgo(x: Double)(date: NSDate) -> NSDate {
-  return date.dateByAddingTimeInterval(-60*60*x)
+  let calendar = NSCalendar.currentCalendar()
+  return calendar.dateByAddingUnit(.Hour, value: Int(-x), toDate: date, options: [])!
 }
 
 let twelveHoursAgo = xHoursAgo(12)

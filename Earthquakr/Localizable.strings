@@ -5,3 +5,10 @@
   Created by Kevin McGladdery on 12/23/15.
   Copyright © 2015 Kevin McGladdery. All rights reserved.
 */
+
+"Getting Location..." = "Getting Location";
+"Location Services Disabled" = "Location Services Disabled";
+"Could not get location" = "Could not get location";
+"No Nearby Earthquakes" = "No Nearby Earthquakes";
+"Feel free to ride that unicycle or eat that precariously stacked ice cream cone!" = "Feel free to ride that unicycle or eat that precariously stacked ice cream cone!";
+"Check for Earthquakes" = "Check for Earthquakes";

@@ -21,7 +21,7 @@ class QuakeListViewController: UIViewController, CLLocationManagerDelegate, DZNE
   @IBOutlet weak var tableView: UITableView!
   
   func askForLocation() {
-    locationLabel.text = "Getting Location..."
+    locationLabel.text = NSLocalizedString("Getting Location...", comment: "")
     manager.requestWhenInUseAuthorization()
     let status = CLLocationManager.authorizationStatus()
     
@@ -29,22 +29,22 @@ class QuakeListViewController: UIViewController, CLLocationManagerDelegate, DZNE
       manager.desiredAccuracy = kCLLocationAccuracyHundredMeters
       manager.requestLocation()
     } else {
-      locationLabel.text = "Location Services Disabled"
+      locationLabel.text = NSLocalizedString("Location Services Disabled", comment: "")
     }
   }
   
   func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
     if status == .AuthorizedAlways || status == .AuthorizedWhenInUse {
-      locationLabel.text = "Getting Location..."
+      locationLabel.text = NSLocalizedString("Getting Location...", comment: "")
     } else {
-      locationLabel.text = "Location Services Disabled"
+      locationLabel.text = NSLocalizedString("Location Services Disabled", comment: "")
     }
   }
   
   func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
     let location = locations.last
     guard let currentLocation = location else {
-      locationLabel.text = "Could not get location"
+      locationLabel.text = NSLocalizedString("Could not get location", comment: "")
       self.refresh.endRefreshing()
       return
       }
@@ -98,7 +98,7 @@ class QuakeListViewController: UIViewController, CLLocationManagerDelegate, DZNE
   }
   
   func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
-    locationLabel.text = "Could not get location"
+    locationLabel.text = NSLocalizedString("Could not get location", comment: "")
   }
   
   func refreshPulled() {
@@ -135,14 +135,14 @@ class QuakeListViewController: UIViewController, CLLocationManagerDelegate, DZNE
     }
   
   func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
-    let text = "No Nearby Earthquakes"
+    let text = NSLocalizedString("No Nearby Earthquakes", comment: "")
     let attribs = [NSFontAttributeName: UIFont.boldSystemFontOfSize(18),
       NSForegroundColorAttributeName: UIColor.darkGrayColor()]
     return NSAttributedString(string: text, attributes: attribs)
   }
   
   func descriptionForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
-    let text = "Feel free to ride that unicycle or eat that precariously stacked ice cream cone!"
+    let text = NSLocalizedString("Feel free to ride that unicycle or eat that precariously stacked ice cream cone!", comment: "")
     let lightGrey = UIColor.darkGrayColor().lighten(0.2)!
     let attribs = [NSFontAttributeName: UIFont.systemFontOfSize(14),
       NSForegroundColorAttributeName: lightGrey]
@@ -150,7 +150,7 @@ class QuakeListViewController: UIViewController, CLLocationManagerDelegate, DZNE
   }
   
   func buttonTitleForEmptyDataSet(scrollView: UIScrollView!, forState state: UIControlState) -> NSAttributedString! {
-    let text = "Check for Earthquakes"
+    let text = NSLocalizedString("Check for Earthquakes", comment: "")
     let attribs = [NSFontAttributeName: UIFont.boldSystemFontOfSize(14),
       NSForegroundColorAttributeName: UIColor.init(hex: 0xD55235FF)]
     return NSAttributedString(string: text, attributes: attribs)

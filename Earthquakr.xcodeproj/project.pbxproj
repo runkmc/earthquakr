@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A1567BA1C2B8ABC006888A4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A1567B91C2B8ABC006888A4 /* Localizable.strings */; };
 		0A33BBA91BE9CC94005B3C1D /* QuakeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A33BBA81BE9CC94005B3C1D /* QuakeViewModel.swift */; };
 		0A33BBAB1BE9CCA1005B3C1D /* QuakeViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A33BBAA1BE9CCA1005B3C1D /* QuakeViewModelSpec.swift */; };
 		0A33BBB11BEAB218005B3C1D /* QuakeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A33BBB01BEAB218005B3C1D /* QuakeListViewController.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A1567B91C2B8ABC006888A4 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		0A33BBA81BE9CC94005B3C1D /* QuakeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakeViewModel.swift; sourceTree = "<group>"; };
 		0A33BBAA1BE9CCA1005B3C1D /* QuakeViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakeViewModelSpec.swift; sourceTree = "<group>"; };
 		0A33BBB01BEAB218005B3C1D /* QuakeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuakeListViewController.swift; path = ../QuakeListViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				0AFB231C1BE7E4D9008DBA84 /* QuakeList.swift */,
 				0A33BBA81BE9CC94005B3C1D /* QuakeViewModel.swift */,
 				0A33BBB21BEAB304005B3C1D /* QuakeDetailViewController.swift */,
+				0A1567B91C2B8ABC006888A4 /* Localizable.strings */,
 			);
 			path = Earthquakr;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AFB49891BEDC35A00D8D091 /* Settings.bundle in Resources */,
+				0A1567BA1C2B8ABC006888A4 /* Localizable.strings in Resources */,
 				0AB71B5E1BE3391E00F950FC /* LaunchScreen.storyboard in Resources */,
 				0AB71B5B1BE3391E00F950FC /* Assets.xcassets in Resources */,
 				0AB71B591BE3391E00F950FC /* Main.storyboard in Resources */,

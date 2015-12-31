@@ -27,16 +27,16 @@ class QuakeDetailViewController: UIViewController {
       self.title = title
     }
   }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-      guard let q = quake else {
-        return
-      }
-      placeLabel.text = q.locationString
-      magnitudeLabel.text = q.magnitudeString
-      distanceLabel.text = "\(Int((currentLocation?.distanceFromLocation(q.location))! / 1000.0))km from the epicenter"
-      adjustMap()
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    guard let q = quake else {
+      return
     }
+    placeLabel.text = q.locationString
+    magnitudeLabel.text = q.magnitudeString
+    distanceLabel.text = "\(Int((currentLocation?.distanceFromLocation(q.location))! / 1000.0))km from the epicenter"
+    adjustMap()
+  }
 
   func adjustMap() {
     let region = MKCoordinateRegionMakeWithDistance(quake!.location.coordinate, 2500, 2500)
@@ -48,20 +48,7 @@ class QuakeDetailViewController: UIViewController {
     UIApplication.sharedApplication().openURL(quake!.url)
   }
   
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+  }

@@ -27,8 +27,8 @@ class QuakeGetter {
   
   func getQuakes() {
     Alamofire.request(.GET, "http://earthquake.usgs.gov/fdsnws/event/1/query", parameters: self.parameters).responseJSON { response in
-          self.handleJson(JSON(data: response.data!).dictionary!)
-          self.completion(self.quakes)
+        self.handleJson(JSON(data: response.data!).dictionary!)
+        self.completion(self.quakes)
       }
     }
   
@@ -47,5 +47,4 @@ class QuakeGetter {
       }
     }
   }
-  
 }

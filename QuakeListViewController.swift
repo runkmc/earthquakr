@@ -106,33 +106,33 @@ class QuakeListViewController: UIViewController, CLLocationManagerDelegate, DZNE
     self.askForLocation()
   }
   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.tableView.emptyDataSetDelegate = self
-        self.tableView.emptyDataSetSource = self
-        self.tableView.tableFooterView = UIView()
-        manager.delegate = self
-        tableView.dataSource = self
-        tableView.delegate = self
-        self.askForLocation()
-        tableView.addSubview(refresh)
-        refresh.addTarget(self, action: Selector("refreshPulled"), forControlEvents: .ValueChanged)
-        // Do any additional setup after loading the view.
-    }
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    self.tableView.emptyDataSetDelegate = self
+    self.tableView.emptyDataSetSource = self
+    self.tableView.tableFooterView = UIView()
+    manager.delegate = self
+    tableView.dataSource = self
+    tableView.delegate = self
+    self.askForLocation()
+    tableView.addSubview(refresh)
+    refresh.addTarget(self, action: Selector("refreshPulled"), forControlEvents: .ValueChanged)
+    // Do any additional setup after loading the view.
+  }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+  }
+
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    guard let cell = sender as! QuakeCell! else {
+      return
     }
-  
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-      guard let cell = sender as! QuakeCell! else {
-        return
-      }
-      let dvc = segue.destinationViewController as! QuakeDetailViewController
-      dvc.quake = cell.quake
-      dvc.currentLocation = self.loc
-    }
+    let dvc = segue.destinationViewController as! QuakeDetailViewController
+    dvc.quake = cell.quake
+    dvc.currentLocation = self.loc
+  }
   
   func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
     let text = NSLocalizedString("No Nearby Earthquakes", comment: "")
@@ -195,7 +195,6 @@ extension QuakeListViewController: UITableViewDataSource {
     cell.timeLabel.text = self.quakeList?.quakeViewModels[indexPath.row].time
     cell.placeLabel.text = self.quakeList?.quakeViewModels[indexPath.row].locationString
     cell.quake = self.quakeList?.quakeViewModels[indexPath.row]
-    
     return cell
   }
 }

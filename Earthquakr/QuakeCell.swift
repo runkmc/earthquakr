@@ -15,15 +15,14 @@ class QuakeCell: UITableViewCell {
   @IBOutlet weak var placeLabel: UILabel!
   var quake: QuakeViewModel?
   
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    // Initialization code
+  }
 
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+  override func setSelected(selected: Bool, animated: Bool) {
+    super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
-    }
-
+    // Configure the view for the selected state
+  }
 }

@@ -55,5 +55,4 @@ struct QuakeList {
     }
      return first() - second() - third()
   }
-  
 }

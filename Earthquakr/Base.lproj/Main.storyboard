@@ -189,18 +189,18 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0j-WW-sfu">
-                                        <rect key="frame" x="129" y="20" width="246" height="17"/>
+                                        <rect key="frame" x="121" y="20" width="254" height="17"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOr-Tn-LsU">
-                                        <rect key="frame" x="129" y="45" width="246" height="17"/>
+                                        <rect key="frame" x="121" y="45" width="254" height="17"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdw-Iq-oPc">
-                                        <rect key="frame" x="129" y="80" width="246" height="30"/>
+                                        <rect key="frame" x="121" y="80" width="254" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                         <state key="normal" title="See more at usgs.gov"/>
                                         <connections>
@@ -211,6 +211,9 @@
                                         <rect key="frame" x="17" y="80" width="74" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                         <state key="normal" title="Tweet this!"/>
+                                        <connections>
+                                            <action selector="tappedTweet:" destination="uVo-Gf-Pbs" eventType="touchUpInside" id="i4T-8A-Jdd"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -221,7 +224,7 @@
                                     <constraint firstItem="Fdw-Iq-oPc" firstAttribute="top" secondItem="TOr-Tn-LsU" secondAttribute="bottom" constant="18" id="H3u-Z2-caQ"/>
                                     <constraint firstItem="B0j-WW-sfu" firstAttribute="top" secondItem="30s-dN-KJ1" secondAttribute="top" constant="20" id="HbF-hY-Y8y"/>
                                     <constraint firstAttribute="trailing" secondItem="B0j-WW-sfu" secondAttribute="trailing" constant="8" id="Iln-tG-7L9"/>
-                                    <constraint firstItem="B0j-WW-sfu" firstAttribute="leading" secondItem="Bts-GR-CYB" secondAttribute="trailing" constant="20" id="Jkx-B8-hyU"/>
+                                    <constraint firstItem="B0j-WW-sfu" firstAttribute="leading" secondItem="Bts-GR-CYB" secondAttribute="trailing" constant="12" id="Jkx-B8-hyU"/>
                                     <constraint firstItem="xV7-q6-buz" firstAttribute="baseline" secondItem="Fdw-Iq-oPc" secondAttribute="baseline" id="KP9-fa-SVE"/>
                                     <constraint firstItem="Bts-GR-CYB" firstAttribute="top" secondItem="30s-dN-KJ1" secondAttribute="top" constant="8" id="NHI-2q-gBJ"/>
                                     <constraint firstItem="Fdw-Iq-oPc" firstAttribute="width" secondItem="TOr-Tn-LsU" secondAttribute="width" id="Tsz-IL-Q3E"/>

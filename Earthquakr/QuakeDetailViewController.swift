@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import Social
 
 class QuakeDetailViewController: UIViewController {
   
@@ -44,6 +45,17 @@ class QuakeDetailViewController: UIViewController {
     map.addAnnotation(QuakeAnnotation(coordinate: quake!.location.coordinate, title: quake!.locationString))
   }
   
+  @IBAction func tappedTweet(sender: AnyObject) {
+    guard let q = quake else {
+      return
+    }
+    if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
+      let tweetVC = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+        tweetVC.setInitialText("I felt the \(q.magnitudeString) magnitude earthquake! http://www.itunes.com/app/earthquakr")
+      self.presentViewController(tweetVC, animated: true, completion: nil)
+    }
+  }
+    
   @IBAction func didTapDetailButton(sender: AnyObject) {
     UIApplication.sharedApplication().openURL(quake!.url)
   }
